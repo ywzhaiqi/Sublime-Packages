@@ -1,0 +1,19 @@
+<snippet>
+    <content><![CDATA[
+function addMutationObserver(selector, callback) {
+    var watch = document.querySelector(selector);
+    if (!watch) return;
+
+    var observer = new MutationObserver(function(mutations){
+        var nodeAdded = mutations.some(function(x){ return x.addedNodes.length > 0; });
+        if (nodeAdded) {
+            // observer.disconnect();
+            callback();
+        }
+    });
+    observer.observe(watch, {childList: true, subtree: true});
+}
+]]></content>
+    <tabTrigger>addMutationObserver</tabTrigger>
+    <scope>source.js</scope>
+</snippet>

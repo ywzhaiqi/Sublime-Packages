@@ -1,0 +1,18 @@
+{
+  "scope": "source.js",
+  "completions":
+  [
+    { "trigger" : "stopPropagation", "contents": "stopPropagation"},
+    { "trigger" : "preventDefault", "contents": "preventDefault"},
+
+    { "trigger" : "cc.services", "contents": "Components.utils.import(\"resource://gre/modules/Services.jsm\")"},
+    { "trigger" : "cc.task", "contents": "Components.utils.import(\"resource://gre/modules/Task.jsm\")"},
+    { "trigger" : "cc.sqlite", "contents": "Components.utils.import(\"resource://gre/modules/Sqlite.jsm\")"},
+
+    { "trigger" : "ccfile", "contents": "Cc[\"@mozilla.org/file/local;1\"].createInstance(Ci.nsILocalFile);"},
+    { "trigger" : "cccopy", "contents": "Cc['@mozilla.org/widget/clipboardhelper;1'].getService(Ci.nsIClipboardHelper).copyString"},
+    { "trigger" : "cu.console", "contents": "let console = (Components.utils.import(\"resource://gre/modules/devtools/Console.jsm\", {})).console;"},
+    
+    { "trigger" : "task.spawn", "contents": "Task.spawn(function * () {\n\n    try {\n        let info = yield OS.File.stat(path);\n    } catch (ex) {\n\n    }\n}).then(null, Components.utils.reportError);\n"},
+  ]
+}
